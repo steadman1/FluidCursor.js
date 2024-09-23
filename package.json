@@ -1,0 +1,31 @@
+{
+  "name": "fluidcursor",
+  "version": "1.0.0",
+  "description": "front-end TypeScript library for dynamic cursor interactions aiming to create more immersive 2D and 3D experiences with native Three.js support.",
+  "main": "dist/FluidCursor.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steadman1/FluidCursor.js.git"
+  },
+  "keywords": [
+    "front-end",
+    "typescript",
+    "UI/UX",
+    "cursor",
+    "fluidcursor",
+    "custom"
+  ],
+  "author": "spencer steadman",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/steadman1/FluidCursor.js/issues"
+  },
+  "homepage": "https://github.com/steadman1/FluidCursor.js#readme",
+  "dependencies": {
+    "gsap": "^3.12.5"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",         // Output compiled files in 'dist/'
+    "target": "es6",            // JavaScript version
+    "module": "commonjs",       // Module system (for Node.js)
+    "declaration": true,        // Generate .d.ts files for TypeScript users
+    "strict": true              // Enable strict type-checking
+  },
+  "include": ["src/**/*"]       // Include all source files
+}
