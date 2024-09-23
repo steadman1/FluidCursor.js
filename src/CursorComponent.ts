@@ -2,7 +2,6 @@ import { Vector1, Vector2 } from "./Vectors";
 import { ConvertGeneric } from "./ConvertGeneric";
 import IntersectionType from "./IntersectionType";
 import TargetComponent from "./TargetComponent";
-import "./Strings";
 
 import gsap from "gsap";
 
@@ -80,7 +79,7 @@ class CursorComponent {
 
     // set up fluid cursor specifics
     this.HTML.classList.add("fluid-cursor");
-    if (!this.withoutIntersectClass.isEmpty()) this.HTML.classList.add(this.withoutIntersectClass);
+    if (!(this.withoutIntersectClass.trim() === "")) this.HTML.classList.add(this.withoutIntersectClass);
   }
   
   hasIntersection() {
@@ -158,8 +157,8 @@ class CursorComponent {
         // when cursor intersects target dispatch generic
         // event and add classes if specified
         window.dispatchEvent(new Event(`fc-has-intersection`));
-        if (!this.hasIntersectClass.isEmpty()) this.HTML.classList.add(this.hasIntersectClass);
-        if (!this.withoutIntersectClass.isEmpty()) this.HTML.classList.remove(this.withoutIntersectClass);
+        if (!(this.hasIntersectClass.trim() === "")) this.HTML.classList.add(this.hasIntersectClass);
+        if (!(this.withoutIntersectClass.trim() === "")) this.HTML.classList.remove(this.withoutIntersectClass);
         break;
       case IntersectionType.LEAVE:
         this.intersections = this.intersections.filter((t) => t !== target);
@@ -171,8 +170,8 @@ class CursorComponent {
       // when cursor leaves all intersection targets 
       // dispatch generic event and add classes
       window.dispatchEvent(new Event(`fc-without-intersection`));
-      if (!this.hasIntersectClass.isEmpty()) this.HTML.classList.remove(this.hasIntersectClass);
-      if (!this.withoutIntersectClass.isEmpty()) this.HTML.classList.add(this.withoutIntersectClass);
+      if (!(this.hasIntersectClass.trim() === "")) this.HTML.classList.remove(this.hasIntersectClass);
+      if (!(this.withoutIntersectClass.trim() === "")) this.HTML.classList.add(this.withoutIntersectClass);
     }
   }
 

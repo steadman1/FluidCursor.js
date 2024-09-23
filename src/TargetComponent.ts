@@ -1,7 +1,6 @@
 import TRBL from "./TopRightBottomLeft";
 import IntersectionType from "./IntersectionType";
 import { ConvertGeneric } from "./ConvertGeneric";
-import "./Strings";
 import { Vector2 } from "./Vectors";
 
 class TargetComponent {
@@ -85,13 +84,13 @@ class TargetComponent {
     // add classes if specified
     switch (type) {
       case IntersectionType.ENTER:
-        if (!this.hasIntersectClass.isEmpty()) this.HTML.classList.add(this.hasIntersectClass);
-        if (!this.withoutIntersectClass.isEmpty()) this.HTML.classList.remove(this.withoutIntersectClass);
+        if (!(this.hasIntersectClass.trim() === "")) this.HTML.classList.add(this.hasIntersectClass);
+        if (!(this.withoutIntersectClass.trim() === "")) this.HTML.classList.remove(this.withoutIntersectClass);
         this.hasIntersection = true;
         break;
       case IntersectionType.LEAVE:
-        if (!this.hasIntersectClass.isEmpty()) this.HTML.classList.remove(this.hasIntersectClass);
-        if (!this.withoutIntersectClass.isEmpty()) this.HTML.classList.add(this.withoutIntersectClass);
+        if (!(this.hasIntersectClass.trim() === "")) this.HTML.classList.remove(this.hasIntersectClass);
+        if (!(this.withoutIntersectClass.trim() === "")) this.HTML.classList.add(this.withoutIntersectClass);
         this.hasIntersection = false;
         break;
     }

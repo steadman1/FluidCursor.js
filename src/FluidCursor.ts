@@ -1,4 +1,4 @@
-import "./FluidCursorStyle.scss";
+import "./css/FluidCursorStyle.scss";
 
 import CursorComponent from "./CursorComponent";
 import TargetComponent from "./TargetComponent";
@@ -7,7 +7,7 @@ import IntersectionType from "./IntersectionType";
 
 import gsap from "gsap";
 
-class FluidCursor {
+export class FluidCursor {
   lastMouse: Vector2;
   targets: Array<TargetComponent>;
   cursors: Array<CursorComponent>;
@@ -206,5 +206,3 @@ class FluidCursor {
     }));
   }
 }
-
-module.exports = FluidCursor;

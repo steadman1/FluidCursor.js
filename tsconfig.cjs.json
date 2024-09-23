@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "outDir": "./dist/cjs",
+    "target": "es6",
+    "declaration": true,
+    "sourceMap": true
+  },
+  "include": ["src/**/*"]
+}
